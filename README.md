@@ -18,18 +18,13 @@ Section 1: setting up postgres
 
    nano /opt/homebrew/var/postgresql@14/pg_hba.conf
 
-   and changing trust to md5
+   and changing trust to md5 for 
 
-   result should look something like this:
+    local
 
-    # TYPE  DATABASE        USER            ADDRESS                 METHOD
+    IPv4 local connections:
 
-    # "local" is for Unix domain socket connections only
-    local   all             all                                     md5   
-    # IPv4 local connections:
-    host    all             all             127.0.0.1/32            md5
-    # IPv6 local connections:
-    host    all             all             ::1/128                 md5
+    IPv6 local connections:
 
 4. reload postgres and log in using command "psql -h localhost -U client_admin -d clientdb"
 
