@@ -5,8 +5,8 @@ import psycopg2
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from db.connection import get_connection  # Assumed database connection handler
-from utils.encryption import get_cipher, encrypt_field  # Assumed encryption functions
+from db.connection import get_connection 
+from utils.encryption import get_cipher, encrypt_field 
 
 # Load environment variables
 load_dotenv()
